@@ -1,0 +1,10 @@
+<h1>Welcome to note_detail</h1>
+
+<h2>{{note}}</h2>
+<hr>
+<a href="{% url 'notes:note_edit' note.slug %}"> Update Note detail</a>
+<hr>
+<h3>{{note.content}}</h3>
+<h4>{{note.active}}</h4>
+<h5>{{note.created}}</h5>
+<h5>{{note.tage}}</h5>

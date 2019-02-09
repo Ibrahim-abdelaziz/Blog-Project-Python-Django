@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+  {% block body %}
+  <section class="blog-area section-gap">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 pb-30 header-text">
+          <h1>{{note}}</h1>
+          <p>
+            {{note.created|date:"j M"}} | {{note.tage}} | {{note.user.username}}
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="single-blog col-lg-10 col-md-10 post_banner">
+
+          <img class="f-img img-fluid mx-auto" src="{{note.image.url}}" alt="">
+
+          <p>
+            {{note.content}}
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  {% endblock %}
